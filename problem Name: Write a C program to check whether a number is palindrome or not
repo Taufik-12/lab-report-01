@@ -1,0 +1,44 @@
+Sample Input Output:
+Input Output
+123 Not Palindrome
+121 palindrome
+Source Code:
+#include<stdio.h>
+int palindrome( int a)
+{
+ int reminder, reversednumber=0;
+ int originalnumber=a;
+ while (a>0)
+ {
+ reminder=a%10;
+ reversednumber= reversednumber*10+ reminder;
+ a= a/10;
+ }
+ if (originalnumber==reversednumber)
+ {
+ return 1;
+ }
+ else
+ {
+ return 0;
+ }
+}
+int main()
+{
+ int a;
+ scanf ("%d",&a);
+ if (palindrome(a))
+ {
+ printf ("Palindrome");
+ }
+ else
+ {
+ printf ("Not Palindrome");
+ }
+ return 0;
+}
+Result and Analysis:
+User will input a number and the code will check whether it is palindrome or not.
+The palindrome function will check the original number and whether the reverse number is the
+same or not. If it is the same, then it will return true otherwise false. In the main function if the
+sub function is true, it will execute properly
