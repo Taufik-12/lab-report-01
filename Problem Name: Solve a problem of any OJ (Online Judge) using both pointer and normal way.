@@ -1,0 +1,42 @@
+Problem NO: 2
+Problem Name: Solve a problem of any OJ (Online Judge) using both pointer and normal way.
+
+Adam and Chef have some number of sticks and they want to swap their sticks.
+Sample Input Output:
+Input Output
+1 2 Values after swapping using pointers:
+num1: 2
+num2: 1
+ Values after swapping without using pointers:
+num1: 2
+ num2: 1
+source code:
+#include <stdio.h>
+void swapWithPointers(int *a, int *b)
+ {
+ int temp = *a;
+ *a = *b;
+ *b = temp;
+ }
+void swapWithoutPointers(int a, int b)
+{
+ int temp = a;
+ a = b;
+ b = temp;
+ }
+int main() {
+ int num1, num2;
+ scanf("%d%d", &num1,&num2);
+ swapWithPointers(&num1, &num2);
+ printf("\nValues after swapping using pointers:\n");
+ printf("num1: %d\n", num1);
+ printf("num2: %d\n", num2);
+ swapWithoutPointers(num1, num2);
+ printf("\nValues after swapping without using pointers:\n");
+ printf("num1: %d\n", num1);
+ printf("num2: %d\n", num2);
+ return 0;
+}
+Result and Analysis:
+When swapping with pointers the values of the variables return the addresses of the value and
+when swapping without pointers or normal way the function directly returns the value.
